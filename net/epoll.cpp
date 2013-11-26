@@ -190,7 +190,7 @@ void InitListenSocket(int epollFd, short port)
 
 int main(int argc, char **argv)
 {
-	unsigned short port = 12345;
+	unsigned short port = 6020;
 	if (argc == 2)
 	{
 		port = atoi(argv[1]);
