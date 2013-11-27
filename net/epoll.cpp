@@ -85,9 +85,10 @@ void AcceptConn(int fd, int events, void *arg)
 	{
 		if (errno != EAGAIN && errno != EINTR)
 		{
+
+			printf("%s: accept, %d", __func__, errno);
+			return;
 		}
-		printf("%s: accept, %d", __func__, errno);
-		return;
 	}
 
 	do
