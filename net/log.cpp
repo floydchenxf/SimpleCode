@@ -16,3 +16,19 @@ void log::debug(const char* _format, ...)
 	vfprintf(m_fileHandle,_format,  arg);
 	va_end(arg);
 }
+
+void log::trace(const char* _format, ...)
+{
+	va_list arg;
+	va_start(arg, _format);
+	vfprintf(m_fileHandle, _format,  arg);
+	va_end(arg);
+}
+
+void log::error(const char* _format, ...)
+{
+   	va_list arg;
+	va_start(arg, _format);
+	vfprintf(m_fileHandle, _format,  arg);
+	va_end(arg);
+}
