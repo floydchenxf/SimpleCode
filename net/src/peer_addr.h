@@ -1,6 +1,8 @@
 #ifndef _PEER_ADDR_H_
 #define _PEER_ADDR_H_
 
+#include "compact.h"
+
 class peer_addr
 {
 public:
@@ -17,7 +19,7 @@ public:
 
     peer_addr(const struct sockaddr_in& _sock_addr)
     {
-        m_addr = _sock_adddr;
+        m_addr = _sock_addr;
     }
 
     sockaddr* operator()()

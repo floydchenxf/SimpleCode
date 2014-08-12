@@ -1,6 +1,8 @@
 #ifndef _TCP_ACCEPTOR_H_
 #define _TCP_ACCEPTOR_H_
 
+#include "tcp_socket.h"
+
 class tcp_acceptor
 {
 public:
@@ -9,7 +11,7 @@ public:
 
     int accept();
     
-    tcp_socket& get_socket();
+    tcp_socket& get_socket() { return m_socket; }
 
 private:
     int _init(peer_addr& _addr, int _max_listen);

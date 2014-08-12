@@ -1,6 +1,8 @@
 #ifndef _TCP_SOCKET_H_
 #define _TCP_SOCKET_H_
 
+#include "peer_addr.h"
+
 class tcp_socket
 {
 public:
@@ -9,7 +11,6 @@ public:
 
     int read(char* _buf, int _size);
     int write(char* _buf, int _size);    
-    int set_blocking();
     int set_nonblocking();
     void close();
 
